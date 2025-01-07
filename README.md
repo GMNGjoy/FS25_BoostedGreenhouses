@@ -15,11 +15,11 @@ _Enjoy!_
 
 ## Screenshots
 
-![Medium Greenhouses with stacked pallets](/_screenshots/greenhouse_01.png)
+![Large Greenhouse, with the output to match!](/_screenshots/greenhouse_01.png)
 <br/><br/>
 
-![Two small greenhouses, side by side like they were meant to be!](/_screenshots/greenhouse_02.png)
+![Medium Greenhouses with stacked pallets](/_screenshots/greenhouse_02.png)
 <br/><br/>
 
-![Large Greenhouse, with the output to match!](/_screenshots/greenhouse_03.png)
+![Two small greenhouses, side by side like they were meant to be!](/_screenshots/greenhouse_03.png)
 <br/><br/>
