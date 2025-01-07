@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<l10n>
+    <translationContributors>
+        <translationContributor>Farmsim Tim</translationContributor>
+    </translationContributors>
+    <texts>
+        <text name="shopItem_boosted" text="Boosted" />
+        <text name="configuration_palletSpawnSide" text="Pallet Spawn Side" />
+        <text name="configuration_right" text="Right" />
+        <text name="configuration_left" text="Left" />
+        <text name="fillType_freewater" text="Water (Free)" />
+    </texts>
+</l10n>

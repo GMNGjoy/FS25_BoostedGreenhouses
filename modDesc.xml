@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<modDesc descVersion="93">
+    <author>GamingJoy</author>
+    <version>0.2.0.0</version>
+    <title>
+        <en>Boosted Greenhouses</en>
+    </title>
+    <description>
+        <en>Faster Greenhouses with configurable spawn sides, stacked pallets and free water!</en>
+    </description>
+    <iconFilename>icon_boostedGreenhouses.dds</iconFilename>
+    <multiplayer supported="true"/>
+    <storeItems>
+        <storeItem xmlFilename="greenHouseMushrooms/greenHouseMushroomsSmall.xml"/>
+        <storeItem xmlFilename="greenHouseMushrooms/greenHouseMushroomsMedium.xml"/>
+        <storeItem xmlFilename="greenHouseMushrooms/greenHouseMushroomsLarge.xml"/>
+    </storeItems>
+    <l10n filenamePrefix="languages/l10n"/>
+</modDesc>
