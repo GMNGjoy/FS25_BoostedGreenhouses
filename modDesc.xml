@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<modDesc descVersion="93">
+<modDesc descVersion="94">
     <author>GamingJoy</author>
-    <version>0.2.0.0</version>
+    <version>1.0.0.0</version>
     <title>
         <en>Boosted Greenhouses</en>
     </title>
@@ -11,6 +11,13 @@
     <iconFilename>icon_boostedGreenhouses.dds</iconFilename>
     <multiplayer supported="true"/>
     <storeItems>
+        <storeItem xmlFilename="greenHouseSaplings/greenHouseSaplings.xml"/>
+        <storeItem xmlFilename="greenHouseTarp/greenHouseTarpSmall.xml"/>
+        <storeItem xmlFilename="greenHouseTarp/greenHouseTarpMedium.xml"/>
+        <storeItem xmlFilename="greenHouseTarp/greenHouseTarpLarge.xml"/>
+        <storeItem xmlFilename="greenHouseGlass/greenHouseGlassSmall.xml"/>
+        <storeItem xmlFilename="greenHouseGlass/greenHouseGlassMedium.xml"/>
+        <storeItem xmlFilename="greenHouseGlass/greenHouseGlassLarge.xml"/>
         <storeItem xmlFilename="greenHouseMushrooms/greenHouseMushroomsSmall.xml"/>
         <storeItem xmlFilename="greenHouseMushrooms/greenHouseMushroomsMedium.xml"/>
         <storeItem xmlFilename="greenHouseMushrooms/greenHouseMushroomsLarge.xml"/>
