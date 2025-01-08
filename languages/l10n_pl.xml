@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<l10n>
+    <translationContributors>
+        <translationContributor>Lisek</translationContributor>
+    </tranelationContributors>
+    <texts>
+        <text name="shopItem_boosted" text="Ulepszone" />
+        <text name="configuration_palletSpawnSide" text="Strona wystawiania palet" />
+        <text name="configuration_right" text="Prawa" />
+        <text name="configuration_left" text="Lewa" />
+        <text name="fillType_freewater" text="Woda (Darmowa)" />
+    </texts>
+</l10n>
