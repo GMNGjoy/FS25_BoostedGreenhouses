@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="greenHouseSaplings.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="10.0.3"/>
+  </Asset>
+
+  <Files>
+    <File fileId="29" filename="$data/maps/mapUS/textures/buildings/infrastructure/pavementConcrete_diffuse.png"/>
+    <File fileId="30" filename="$data/maps/mapUS/textures/buildings/infrastructure/pavementConcrete_normal.png"/>
+    <File fileId="31" filename="$data/maps/mapUS/textures/buildings/infrastructure/pavementConcrete_specular.png"/>
+    <File fileId="20" filename="$data/placeables/brandless/greenhouses/greenHousesSaplings/greenHouseGround_diffuse.png"/>
+    <File fileId="21" filename="$data/placeables/brandless/greenhouses/greenHousesSaplings/greenHouseGround_normal.png"/>
+    <File fileId="22" filename="$data/placeables/brandless/greenhouses/greenHousesSaplings/greenHouseGround_specular.png"/>
+    <File fileId="16" filename="$data/placeables/brandless/greenhouses/greenHousesTarp/greenHousesTarpGlassTop_normal.png"/>
+    <File fileId="8" filename="$data/placeables/brandless/greenhouses/greenHousesTarp/greenHousesTarpGlass_diffuse.png"/>
+    <File fileId="9" filename="$data/placeables/brandless/greenhouses/greenHousesTarp/greenHousesTarpGlass_normal.png"/>
+    <File fileId="10" filename="$data/placeables/brandless/greenhouses/greenHousesTarp/greenHousesTarpGlass_specular.png"/>
+    <File fileId="2" filename="$data/placeables/brandless/greenhouses/greenHousesTarp/greenHousesTarp_diffuse.png"/>
+    <File fileId="3" filename="$data/placeables/brandless/greenhouses/greenHousesTarp/greenHousesTarp_normal.png"/>
+    <File fileId="4" filename="$data/placeables/brandless/greenhouses/greenHousesTarp/greenHousesTarp_specular.png"/>
+    <File fileId="17" filename="$data/placeables/brandless/greenhouses/shared/addons_diffuse.png"/>
+    <File fileId="18" filename="$data/placeables/brandless/greenhouses/shared/addons_normal.png"/>
+    <File fileId="19" filename="$data/placeables/brandless/greenhouses/shared/addons_specular.png"/>
+    <File fileId="5" filename="$data/shaders/placeableShader.xml"/>
+    <File fileId="23" filename="$data/shaders/vertexPaintShader.xml"/>
+    <File fileId="13" filename="$data/shared/warningStripes_diffuse.png"/>
+    <File fileId="14" filename="$data/shared/warningStripes_normal.png"/>
+    <File fileId="15" filename="$data/shared/warningStripes_specular.png"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="addons_mat" materialId="5" customShaderId="5">
+      <Texture fileId="17"/>
+      <Normalmap fileId="18"/>
+      <Glossmap fileId="19"/>
+    </Material>
+    <Material name="greenHouseGround_mat" materialId="6" customShaderId="23" customShaderVariation="alphaNoise_terrainFormat_alphaMap">
+      <Texture fileId="20"/>
+      <Normalmap fileId="21"/>
+      <Glossmap fileId="22"/>
+    </Material>
+    <Material name="greenHousesTarp_mat" materialId="7" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+    </Material>
+    <Material name="greenHousesTarpGlass_03_mat" materialId="8" alphaBlending="true" customShaderId="5">
+      <Texture fileId="8"/>
+      <Normalmap fileId="16"/>
+      <Glossmap fileId="10"/>
+    </Material>
+    <Material name="greenHousesTarpGlass_06_mat" materialId="9" alphaBlending="true">
+      <Texture fileId="8"/>
+      <Normalmap fileId="9"/>
+      <Glossmap fileId="10"/>
+    </Material>
+    <Material name="greenHousesTarpGlass_09_mat" materialId="10" diffuseColor="0.337255 0.352941 0.384314 1" specularColor="0.901961 1 0.8" alphaBlending="true" customShaderId="5">
+      <Normalmap fileId="9"/>
+    </Material>
+    <Material name="greenHousesTarpGlass_12_mat" materialId="11" diffuseColor="0.337255 0.352941 0.384314 1" alphaBlending="true" customShaderId="5">
+      <Normalmap fileId="16"/>
+      <Glossmap fileId="10"/>
+    </Material>
+    <Material name="lambert1" materialId="12" diffuseColor="0.501961 0.501961 0.501961 1">
+    </Material>
+    <Material name="pavementConcrete_mat" materialId="13" customShaderId="23" customShaderVariation="alphaNoise">
+      <Texture fileId="29"/>
+      <Normalmap fileId="30"/>
+      <Glossmap fileId="31"/>
+    </Material>
+    <Material name="warningStripes_mat" materialId="14">
+      <Texture fileId="13"/>
+      <Normalmap fileId="14"/>
+      <Glossmap fileId="15"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="greenHouseSaplings.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="greenHousesSaplings" lockedgroup="true" clipDistance="300" nodeId="62">
+      <TransformGroup name="clearAreas" nodeId="63">
+        <TransformGroup name="clearAreaStart01" translation="-6.5 0 -8.5" nodeId="64">
+          <TransformGroup name="clearAreaWidth01" translation="15 0 0" nodeId="65"/>
+          <TransformGroup name="clearAreaHeight01" translation="0 0 19.5" nodeId="66"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="levelAreas" nodeId="67">
+        <TransformGroup name="levelAreaStart01" translation="-7 0 -9" nodeId="68">
+          <TransformGroup name="levelAreaWidth01" translation="16 0 0" nodeId="69"/>
+          <TransformGroup name="levelAreaHeight01" translation="0 0 20.5" nodeId="70"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="paintAreas" nodeId="71">
+        <TransformGroup name="paintAreaStart01" translation="-5.75 0 -7.75" nodeId="72">
+          <TransformGroup name="paintAreaWidth01" translation="11.5 0 0" nodeId="73"/>
+          <TransformGroup name="paintAreaHeight01" translation="0 0 15.5" nodeId="74"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="indoorAreas" nodeId="75">
+        <TransformGroup name="indoorAreaStart01" translation="-6.25 0 -8.25" nodeId="76">
+          <TransformGroup name="indoorAreaWidth01" translation="14.25 0 0" nodeId="77"/>
+          <TransformGroup name="indoorAreaHeight01" translation="0 0 19.25" nodeId="78"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="testAreas" nodeId="79">
+        <TransformGroup name="testAreaStart01" translation="-6.5 0 -8.5" nodeId="80">
+          <TransformGroup name="testAreaEnd01" translation="15 3.25 19.5" nodeId="81"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="tipOcclusionUpdateAreas" nodeId="82">
+        <TransformGroup name="tipOcclusionUpdateAreaStart01" translation="-6.5 0 -8.5" nodeId="83">
+          <TransformGroup name="tipOcclusionUpdateAreaEnd01" translation="15 0 19.5" nodeId="84"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="greenHouse" nodeId="85">
+        <TransformGroup name="plantNodes" translation="0 0 3.75781" nodeId="86">
+          <TransformGroup name="plantNode1" translation="-4.77291 0 2.24219" nodeId="87"/>
+          <TransformGroup name="plantNode2" translation="-4.77291 0 0.242191" nodeId="88"/>
+          <TransformGroup name="plantNode3" translation="-4.77291 0 -1.75781" nodeId="89"/>
+          <TransformGroup name="plantNode4" translation="-4.77291 0 -3.75781" nodeId="90"/>
+          <TransformGroup name="plantNode5" translation="-4.77291 0 -5.75781" nodeId="91"/>
+          <TransformGroup name="plantNode6" translation="-4.77291 0 -7.75781" nodeId="92"/>
+          <TransformGroup name="plantNode7" translation="-4.77291 0 -9.75781" nodeId="93"/>
+          <TransformGroup name="plantNode8" translation="-1.22709 0 2.24219" nodeId="94"/>
+          <TransformGroup name="plantNode9" translation="-1.22709 0 0.242191" nodeId="95"/>
+          <TransformGroup name="plantNode10" translation="-1.22709 0 -1.75781" nodeId="96"/>
+          <TransformGroup name="plantNode11" translation="-1.22709 0 -3.75781" nodeId="97"/>
+          <TransformGroup name="plantNode12" translation="-1.22709 0 -5.75781" nodeId="98"/>
+          <TransformGroup name="plantNode13" translation="-1.22709 0 -7.75781" nodeId="99"/>
+          <TransformGroup name="plantNode14" translation="-1.22709 0 -9.75781" nodeId="100"/>
+          <TransformGroup name="plantNode15" translation="1.21467 0 -9.75781" nodeId="101"/>
+          <TransformGroup name="plantNode16" translation="1.21467 0 -7.75781" nodeId="102"/>
+          <TransformGroup name="plantNode17" translation="1.21467 0 -5.75781" nodeId="103"/>
+          <TransformGroup name="plantNode18" translation="1.21467 0 -3.75781" nodeId="104"/>
+          <TransformGroup name="plantNode19" translation="1.21467 0 -1.75781" nodeId="105"/>
+          <TransformGroup name="plantNode20" translation="1.21467 0 0.242191" nodeId="106"/>
+          <TransformGroup name="plantNode21" translation="1.21467 0 2.24219" nodeId="107"/>
+          <TransformGroup name="plantNode22" translation="4.76049 0 2.24219" nodeId="108"/>
+          <TransformGroup name="plantNode23" translation="4.76049 0 0.242191" nodeId="109"/>
+          <TransformGroup name="plantNode24" translation="4.76049 0 -1.75781" nodeId="110"/>
+          <TransformGroup name="plantNode25" translation="4.76049 0 -3.75781" nodeId="111"/>
+          <TransformGroup name="plantNode26" translation="4.76049 0 -5.75781" nodeId="112"/>
+          <TransformGroup name="plantNode27" translation="4.76049 0 -7.75781" nodeId="113"/>
+          <TransformGroup name="plantNode28" translation="4.76049 0 -9.75781" nodeId="114"/>
+        </TransformGroup>
+        <TransformGroup name="effectNodes" nodeId="115">
+          <TransformGroup name="effectNode1" translation="4.84437 2.52627 0.994582" nodeId="116"/>
+          <TransformGroup name="effectNode2" translation="4.84437 2.52627 1.97808" nodeId="117"/>
+          <TransformGroup name="effectNode3" translation="4.84437 2.52627 2.96516" nodeId="118"/>
+          <TransformGroup name="effectNode4" translation="4.84437 2.52627 3.95747" nodeId="119"/>
+          <TransformGroup name="effectNode5" translation="4.84437 2.52627 4.93872" nodeId="120"/>
+          <TransformGroup name="effectNode6" translation="4.84437 2.52627 5.92769" nodeId="121"/>
+          <TransformGroup name="effectNode7" translation="4.84437 2.52627 6.91338" nodeId="122"/>
+          <TransformGroup name="effectNode8" translation="1.09849 2.52627 0.994582" nodeId="123"/>
+          <TransformGroup name="effectNode9" translation="1.09849 2.52627 1.97808" nodeId="124"/>
+          <TransformGroup name="effectNode10" translation="1.09849 2.52627 2.96516" nodeId="125"/>
+          <TransformGroup name="effectNode11" translation="1.09849 2.52627 3.95747" nodeId="126"/>
+          <TransformGroup name="effectNode12" translation="1.09849 2.52627 4.93872" nodeId="127"/>
+          <TransformGroup name="effectNode13" translation="1.09849 2.52627 5.92769" nodeId="128"/>
+          <TransformGroup name="effectNode14" translation="1.09849 2.52627 6.91338" nodeId="129"/>
+          <TransformGroup name="effectNode15" translation="-1.09942 2.52627 1.97808" nodeId="130"/>
+          <TransformGroup name="effectNode16" translation="-1.09942 2.52627 4.93872" nodeId="131"/>
+          <TransformGroup name="effectNode17" translation="-1.09942 2.52627 5.92769" nodeId="132"/>
+          <TransformGroup name="effectNode18" translation="-1.09942 2.52627 3.95747" nodeId="133"/>
+          <TransformGroup name="effectNode19" translation="-1.09942 2.52627 2.96516" nodeId="134"/>
+          <TransformGroup name="effectNode20" translation="-1.09942 2.52627 0.994582" nodeId="135"/>
+          <TransformGroup name="effectNode21" translation="-1.09942 2.52627 6.91338" nodeId="136"/>
+          <TransformGroup name="effectNode22" translation="-4.8453 2.52627 1.97808" nodeId="137"/>
+          <TransformGroup name="effectNode23" translation="-4.8453 2.52627 4.93872" nodeId="138"/>
+          <TransformGroup name="effectNode24" translation="-4.8453 2.52627 5.92769" nodeId="139"/>
+          <TransformGroup name="effectNode25" translation="-4.8453 2.52627 3.95747" nodeId="140"/>
+          <TransformGroup name="effectNode26" translation="-4.8453 2.52627 2.96516" nodeId="141"/>
+          <TransformGroup name="effectNode27" translation="-4.8453 2.52627 0.994582" nodeId="142"/>
+          <TransformGroup name="effectNode28" translation="-4.8453 2.52627 6.91338" nodeId="143"/>
+          <TransformGroup name="effectNode29" translation="1.09849 2.52627 -5.9211" nodeId="144"/>
+          <TransformGroup name="effectNode30" translation="-4.8453 2.52627 -0.987989" nodeId="145"/>
+          <TransformGroup name="effectNode31" translation="-1.09942 2.52627 -4.9376" nodeId="146"/>
+          <TransformGroup name="effectNode32" translation="1.09849 2.52627 -3.95053" nodeId="147"/>
+          <TransformGroup name="effectNode33" translation="4.84437 2.52627 -5.9211" nodeId="148"/>
+          <TransformGroup name="effectNode34" translation="-1.09942 2.52627 -0.987989" nodeId="149"/>
+          <TransformGroup name="effectNode35" translation="4.84437 2.52627 -1.97696" nodeId="150"/>
+          <TransformGroup name="effectNode36" translation="-1.09942 2.52627 -2.95821" nodeId="151"/>
+          <TransformGroup name="effectNode37" translation="4.84437 2.52627 -2.95821" nodeId="152"/>
+          <TransformGroup name="effectNode38" translation="4.84437 2.52627 -0.987989" nodeId="153"/>
+          <TransformGroup name="effectNode39" translation="-4.8453 2.52627 -3.95053" nodeId="154"/>
+          <TransformGroup name="effectNode40" translation="1.09849 2.52627 -4.9376" nodeId="155"/>
+          <TransformGroup name="effectNode41" translation="-4.8453 2.52627 -4.9376" nodeId="156"/>
+          <TransformGroup name="effectNode42" translation="-1.09942 2.52627 -3.95053" nodeId="157"/>
+          <TransformGroup name="effectNode43" translation="1.09849 2.52627 -2.95821" nodeId="158"/>
+          <TransformGroup name="effectNode44" translation="4.84437 2.52627 -4.9376" nodeId="159"/>
+          <TransformGroup name="effectNode45" translation="-4.8453 2.52627 -6.91175" nodeId="160"/>
+          <TransformGroup name="effectNode46" translation="-1.09942 2.52627 -1.97696" nodeId="161"/>
+          <TransformGroup name="effectNode47" translation="-4.8453 2.52627 -1.97696" nodeId="162"/>
+          <TransformGroup name="effectNode48" translation="4.84437 2.52627 -3.95053" nodeId="163"/>
+          <TransformGroup name="effectNode49" translation="4.84437 2.52627 -6.91175" nodeId="164"/>
+          <TransformGroup name="effectNode50" translation="-1.09942 2.52627 -6.91175" nodeId="165"/>
+          <TransformGroup name="effectNode51" translation="1.09849 2.52627 -1.97696" nodeId="166"/>
+          <TransformGroup name="effectNode52" translation="1.09849 2.52627 -0.987989" nodeId="167"/>
+          <TransformGroup name="effectNode53" translation="-4.8453 2.52627 -5.9211" nodeId="168"/>
+          <TransformGroup name="effectNode54" translation="1.09849 2.52627 -6.91175" nodeId="169"/>
+          <TransformGroup name="effectNode55" translation="-1.09942 2.52627 -5.9211" nodeId="170"/>
+          <TransformGroup name="effectNode56" translation="-4.8453 2.52627 -2.95821" nodeId="171"/>
+          <TransformGroup name="effectNode57" translation="-4.8453 2.52627 -0.002297" nodeId="172"/>
+          <TransformGroup name="effectNode58" translation="4.84437 2.52627 -0.002297" nodeId="173"/>
+          <TransformGroup name="effectNode59" translation="-1.09942 2.52627 -0.002297" nodeId="174"/>
+          <TransformGroup name="effectNode60" translation="1.09849 2.52627 -0.002297" nodeId="175"/>
+        </TransformGroup>
+        <TransformGroup name="palletSpawner" translation="0.497212 0 0" nodeId="176">
+          <TransformGroup name="spawnPlaceStart01" translation="6.5 0 8" rotation="0 180 0" nodeId="177">
+            <TransformGroup name="spawnPlaceEnd01" translation="0 0 16" nodeId="178"/>
+          </TransformGroup>
+          <TransformGroup name="spawnPlaceStart02" translation="6.5 1 8" rotation="0 180 0" nodeId="179">
+            <TransformGroup name="spawnPlaceEnd02" translation="0 0 16" nodeId="180"/>
+          </TransformGroup>
+          <TransformGroup name="spawnPlaceStart03" translation="6.5 2 8" rotation="0 180 0" nodeId="181">
+            <TransformGroup name="spawnPlaceEnd03" translation="0 0 16" nodeId="182"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="sellingStation" nodeId="183">
+          <Shape name="exactFillRootNode" translation="5 0 10" shapeId="1" kinematic="true" compound="true" collisionFilterGroup="0x40000000" collisionFilterMask="0x20000000" nodeId="184" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="12"/>
+          <TransformGroup name="unloadTriggerMarker" translation="5.5 0 10" nodeId="185"/>
+          <TransformGroup name="unloadTriggerAINode" translation="4.5 0 11" rotation="0 90 0" nodeId="186"/>
+        </TransformGroup>
+        <TransformGroup name="storage" nodeId="187"/>
+        <Shape name="playerTrigger" translation="2.96853 1.10768 3.96647" shapeId="2" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x100000" nodeId="188" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="12"/>
+        <TransformGroup name="playerTriggerMarker" translation="2.96853 0 3.96647" nodeId="189"/>
+        <TransformGroup name="teleportNode" translation="0 0 10" rotation="0 140.854 0" nodeId="190"/>
+      </TransformGroup>
+      <TransformGroup name="doors" nodeId="191">
+        <TransformGroup name="door1" translation="-2.33619 1.2328 7.92387" nodeId="192">
+          <TransformGroup name="door1Left" nodeId="193">
+            <TransformGroup name="visual_lod" lodDistance="0 50" nodeId="194">
+              <Shape name="door1Left_lod0" shapeId="3" nodeId="195" castsShadows="true" receiveShadows="true" materialIds="7">
+                <Shape name="glass" shapeId="4" nodeId="196" castsShadows="true" receiveShadows="true" materialIds="9"/>
+              </Shape>
+              <Shape name="door1Left_lod1" shapeId="5" nodeId="197" castsShadows="true" receiveShadows="true" materialIds="7">
+                <Shape name="glass" shapeId="4" nodeId="198" castsShadows="true" receiveShadows="true" materialIds="10"/>
+              </Shape>
+            </TransformGroup>
+            <Shape name="col" shapeId="6" kinematic="true" collisionFilterGroup="0x1034" collisionFilterMask="0xfffffbff" density="0.0001" nodeId="199" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="12"/>
+          </TransformGroup>
+          <Shape name="door1Trigger" translation="-0.632347 -0.028663 0.004686" shapeId="7" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x100000" nodeId="200" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="12"/>
+        </TransformGroup>
+        <TransformGroup name="door2" translation="3.60089 1.2328 7.92387" nodeId="201">
+          <TransformGroup name="door2Right" nodeId="202">
+            <TransformGroup name="visual_lod" lodDistance="0 50" nodeId="203">
+              <Shape name="door2Right_lod0" shapeId="3" nodeId="204" castsShadows="true" receiveShadows="true" materialIds="7">
+                <Shape name="glass" shapeId="4" nodeId="205" castsShadows="true" receiveShadows="true" materialIds="9"/>
+              </Shape>
+              <Shape name="door2Right_lod1" shapeId="5" nodeId="206" castsShadows="true" receiveShadows="true" materialIds="7">
+                <Shape name="glass" shapeId="4" nodeId="207" castsShadows="true" receiveShadows="true" materialIds="10"/>
+              </Shape>
+            </TransformGroup>
+            <Shape name="col" shapeId="6" kinematic="true" collisionFilterGroup="0x1034" collisionFilterMask="0xfffffbff" density="0.0001" nodeId="208" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="12"/>
+          </TransformGroup>
+          <Shape name="door2Trigger" translation="-0.632347 -0.028663 0.004686" shapeId="7" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x100000" nodeId="209" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="12"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="warningStripes" nodeId="210">
+        <Shape name="warningStripes_palletSpawnArea" translation="7.54963 0.003 -0.070171" rotation="0 90 0" shapeId="8" nodeId="211" castsShadows="false" receiveShadows="true" nonRenderable="true" terrainDecal="true" renderedInViewports="false" materialIds="14"/>
+      </TransformGroup>
+      <Shape name="infoTrigger" shapeId="9" static="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x100000" nodeId="212" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="12"/>
+      <TransformGroup name="visuals" nodeId="213">
+        <TransformGroup name="greenHousesSaplings_lod" lodDistance="0 37" lodBlending="false" nodeId="214">
+          <Shape name="greenHousesSaplings_lod0" shapeId="10" nodeId="215" castsShadows="true" receiveShadows="true" materialIds="7"/>
+          <Shape name="greenHousesSaplings_lod1" shapeId="11" nodeId="216" castsShadows="true" receiveShadows="true" materialIds="7"/>
+        </TransformGroup>
+        <TransformGroup name="glass_lod" lodDistance="0 55" nodeId="217">
+          <TransformGroup name="LOD0" nodeId="218">
+            <TransformGroup name="side" nodeId="219">
+              <Shape name="glass1" translation="-2.85576 1.62583 -7.9337" shapeId="12" nodeId="220" castsShadows="true" receiveShadows="true" materialIds="9"/>
+              <Shape name="glass2" translation="-5.98159 0.749435 5.9497" shapeId="13" nodeId="221" castsShadows="true" receiveShadows="true" materialIds="9"/>
+              <Shape name="glass3" translation="5.9816 0.749435 -5.9497" shapeId="14" nodeId="222" castsShadows="true" receiveShadows="true" materialIds="9"/>
+              <Shape name="glass4" translation="2.98624 1.62583 7.93371" shapeId="15" nodeId="223" castsShadows="true" receiveShadows="true" materialIds="9"/>
+              <Shape name="glass5" translation="-5.98159 0.749435 -5.9497" shapeId="16" nodeId="224" castsShadows="true" receiveShadows="true" materialIds="9"/>
+              <Shape name="glass6" translation="-5.98159 0.749435 -1.98323" shapeId="17" nodeId="225" castsShadows="true" receiveShadows="true" materialIds="9"/>
+              <Shape name="glass7" translation="-5.98159 0.749435 1.98324" shapeId="18" nodeId="226" castsShadows="true" receiveShadows="true" materialIds="9"/>
+              <Shape name="glass8" translation="5.9816 0.749436 5.9497" shapeId="19" nodeId="227" castsShadows="true" receiveShadows="true" materialIds="9"/>
+              <Shape name="glass9" translation="5.9816 0.749435 1.98324" shapeId="20" nodeId="228" castsShadows="true" receiveShadows="true" materialIds="9"/>
+              <Shape name="glass10" translation="5.9816 0.749435 -1.98323" shapeId="21" nodeId="229" castsShadows="true" receiveShadows="true" materialIds="9"/>
+              <Shape name="glass11" translation="-3.00127 1.62583 7.93371" shapeId="22" nodeId="230" castsShadows="true" receiveShadows="true" materialIds="9"/>
+              <Shape name="glass12" translation="3.00126 1.62583 -7.9337" shapeId="23" nodeId="231" castsShadows="true" receiveShadows="true" materialIds="9"/>
+            </TransformGroup>
+            <TransformGroup name="top" nodeId="232">
+              <Shape name="glassTop" translation="-1.49388 2.49703 -5.9497" shapeId="24" nodeId="233" castsShadows="true" receiveShadows="true" materialIds="8"/>
+              <Shape name="glassTop1" translation="1.55307 2.49703 -5.94969" shapeId="25" nodeId="234" castsShadows="true" receiveShadows="true" materialIds="8"/>
+              <Shape name="glassTop2" translation="-1.49388 2.49703 5.9497" shapeId="26" nodeId="235" castsShadows="true" receiveShadows="true" materialIds="8"/>
+              <Shape name="glassTop3" translation="-1.49388 2.49703 1.98323" shapeId="27" nodeId="236" castsShadows="true" receiveShadows="true" materialIds="8"/>
+              <Shape name="glassTop4" translation="-1.49388 2.49703 -1.98323" shapeId="28" nodeId="237" castsShadows="true" receiveShadows="true" materialIds="8"/>
+              <Shape name="glassTop5" translation="1.55307 2.49703 5.94971" shapeId="29" nodeId="238" castsShadows="true" receiveShadows="true" materialIds="8"/>
+              <Shape name="glassTop6" translation="1.55307 2.49703 1.98324" shapeId="30" nodeId="239" castsShadows="true" receiveShadows="true" materialIds="8"/>
+              <Shape name="glassTop7" translation="1.55307 2.49703 -1.98322" shapeId="31" nodeId="240" castsShadows="true" receiveShadows="true" materialIds="8"/>
+              <Shape name="glassTop8" translation="4.49498 2.27032 5.94971" shapeId="32" nodeId="241" castsShadows="true" receiveShadows="true" materialIds="8"/>
+              <Shape name="glassTop9" translation="4.49498 2.27032 1.98324" shapeId="33" nodeId="242" castsShadows="true" receiveShadows="true" materialIds="8"/>
+              <Shape name="glassTop10" translation="4.49498 2.27032 -1.98322" shapeId="34" nodeId="243" castsShadows="true" receiveShadows="true" materialIds="8"/>
+              <Shape name="glassTop11" translation="4.49498 2.27032 -5.94969" shapeId="35" nodeId="244" castsShadows="true" receiveShadows="true" materialIds="8"/>
+              <Shape name="glassTop12" translation="-4.43578 2.27032 -5.9497" shapeId="36" nodeId="245" castsShadows="true" receiveShadows="true" materialIds="8"/>
+              <Shape name="glassTop13" translation="-4.43578 2.27032 -1.98323" shapeId="37" nodeId="246" castsShadows="true" receiveShadows="true" materialIds="8"/>
+              <Shape name="glassTop14" translation="-4.43578 2.27032 1.98323" shapeId="38" nodeId="247" castsShadows="true" receiveShadows="true" materialIds="8"/>
+              <Shape name="glassTop15" translation="-4.43578 2.27032 5.9497" shapeId="39" nodeId="248" castsShadows="true" receiveShadows="true" materialIds="8"/>
+            </TransformGroup>
+          </TransformGroup>
+          <TransformGroup name="LOD1" nodeId="249">
+            <Shape name="glass" shapeId="40" nodeId="250" castsShadows="true" receiveShadows="true" materialIds="10"/>
+            <Shape name="glassTop" shapeId="41" nodeId="251" castsShadows="true" receiveShadows="true" materialIds="11"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="details" nodeId="252">
+          <Shape name="waterTank" translation="2.97149 0 3.95315" shapeId="42" nodeId="253" castsShadows="true" receiveShadows="true" materialIds="5"/>
+          <Shape name="groundDecal" shapeId="43" clipDistance="60" nodeId="254" castsShadows="false" receiveShadows="true" terrainDecal="true" renderedInViewports="false" decalLayer="1" materialIds="6"/>
+          <Shape name="pavementDecal" shapeId="44" clipDistance="60" nodeId="255" castsShadows="false" receiveShadows="true" terrainDecal="true" renderedInViewports="false" decalLayer="1" materialIds="13"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="collisions" nodeId="256">
+        <Shape name="col" shapeId="45" static="true" collisionFilterGroup="0x1034" collisionFilterMask="0xfffffbff" nodeId="257" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="12"/>
+        <Shape name="tipCollision" translation="0.853342 0 1.83062" shapeId="46" static="true" collisionFilterGroup="0x8" collisionFilterMask="0x1" nodeId="258" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="12"/>
+      </TransformGroup>
+    </TransformGroup>
+  </Scene>
+
+</i3D>

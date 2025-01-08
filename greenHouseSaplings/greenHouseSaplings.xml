@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<placeable type="greenhouse" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://validation.gdn.giants-software.com/xml/fs25/placeable.xsd">
+    <storeData>
+        <name params="$l10n_shopItem_boosted|$l10n_shopItem_greenHousesSaplings">%s %s</name>
+        <functions>
+            <function>$l10n_function_productionPoint</function>
+        </functions>
+        <image>$data/placeables/brandless/greenhouses/greenHousesSaplings/store_greenHousesSaplings.dds</image>
+        <price>3001</price>
+        <dailyUpkeep>30</dailyUpkeep>
+        <lifetime>1000</lifetime>
+        <rotation>0</rotation>
+        <brand>NONE</brand>
+        <species>PLACEABLE</species>
+        <category>placeableMisc</category>
+        <brush>
+            <type>placeable</type>
+            <category>production</category>
+            <tab>greenhouses</tab>
+        </brush>
+        <canBeSold>true</canBeSold>
+        <showInStore>true</showInStore>
+    </storeData>
+
+    <base>
+        <filename>greenHouseSaplings/greenHouseSaplings.i3d</filename>
+        <canBeRenamed>true</canBeRenamed>
+    </base>
+
+    <placement useRandomYRotation="false" useManualYRotation="true" >
+        <testAreas>
+            <testArea startNode="testAreaStart01" endNode="testAreaEnd01" />
+        </testAreas>
+
+        <sounds>
+            <place template="medImp" />
+        </sounds>
+    </placement>
+
+    <clearAreas>
+        <clearArea startNode="clearAreaStart01" widthNode="clearAreaWidth01" heightNode="clearAreaHeight01"/>
+    </clearAreas>
+
+    <leveling requireLeveling="true" maxSmoothDistance="1" maxSlope="75" maxEdgeAngle="30">
+        <levelAreas>
+            <levelArea startNode="levelAreaStart01" widthNode="levelAreaWidth01" heightNode="levelAreaHeight01" groundType="asphalt"/>
+        </levelAreas>
+        <paintAreas>
+            <paintArea startNode="paintAreaStart01" widthNode="paintAreaWidth01" heightNode="paintAreaHeight01" groundType="dirt"/>
+        </paintAreas>
+    </leveling>
+
+    <indoorAreas>
+        <indoorArea startNode="indoorAreaStart01" widthNode="indoorAreaWidth01" heightNode="indoorAreaHeight01"/>
+    </indoorAreas>
+
+    <tipOcclusionUpdateAreas>
+        <tipOcclusionUpdateArea startNode="tipOcclusionUpdateAreaStart01" endNode="tipOcclusionUpdateAreaEnd01" />
+    </tipOcclusionUpdateAreas>
+
+    <ai>
+        <updateAreas>
+            <updateArea startNode="tipOcclusionUpdateAreaStart01" endNode="tipOcclusionUpdateAreaEnd01" />
+        </updateAreas>
+    </ai>
+
+    <infoTrigger triggerNode="infoTrigger" />
+
+    <hotspots>
+        <hotspot type="PRODUCTION_POINT" linkNode="unloadTriggerMarker" teleportNode="teleportNode" />
+    </hotspots>
+
+    <triggerMarkers>
+        <triggerMarker node="warningStripes" />
+        <triggerMarker node="playerTriggerMarker" filename="$data/shared/assets/marker/markerIconWrench.i3d" adjustToGround="true" />
+        <triggerMarker node="unloadTriggerMarker" filename="$data/shared/assets/marker/markerIconWater.i3d"  adjustToGround="true" />
+    </triggerMarkers>
+
+    <greenhouse>
+        <plants>
+            <plant fillType="RICESAPLINGS" xmlFilename="$data/placeables/brandless/greenhouses/vegetables/riceSaplings/riceSaplings.xml" />
+            <!-- <plant fillType="TREESAPLINGS" xmlFilename="$data/placeables/brandless/greenhouses/vegetables/treeSaplings/treeSaplings.xml" /> -->
+        </plants>
+
+        <plantSpaces>
+            <spacesParent node="plantNodes" useRandomYRot="false" />
+        </plantSpaces>
+
+        <sounds>
+            <watering template="defaultSprayer" linkNode="0>" loops="0" />
+        </sounds>
+    </greenhouse>
+
+    <productionPoint>
+        <productions>
+            <production id="riceSaplings" name="$l10n_fillType_riceSaplings" cyclesPerHour="10" costsPerActiveHour="0.1">
+                <inputs>
+                    <input fillType="WATER" amount="3" />
+                </inputs>
+                <outputs>
+                    <output fillType="RICESAPLINGS" amount="1" />
+                </outputs>
+            </production>
+            <!-- <production id="treeSaplings" name="$l10n_fillType_treeSaplings" cyclesPerHour="18" costsPerActiveHour="0.1">
+                <inputs>
+                    <input fillType="WATER" amount="5" />
+                </inputs>
+                <outputs>
+                    <output fillType="TREESAPLINGS" amount="1" />
+                </outputs>
+            </production> -->
+            <production id="water" name="$l10n_fillType_freewater" cyclesPerHour="100" costsPerActiveHour="0">
+                <inputs>
+                    <input fillType="WATER" amount="0" />
+                </inputs>
+                <outputs>
+                    <output fillType="WATER" amount="1" />
+                </outputs>
+            </production>
+        </productions>
+
+        <sellingStation node="sellingStation" appearsOnStats="true" supportsExtension="true">
+            <unloadTrigger exactFillRootNode="exactFillRootNode" fillTypes="WATER" aiNode="unloadTriggerAINode"/>
+        </sellingStation>
+
+        <loadingStation fillTypes="WATER" supportsExtension="true" />
+
+        <palletSpawner>
+            <spawnPlaces>
+                <spawnPlace startNode="spawnPlaceStart01" endNode="spawnPlaceEnd01" />
+                <spawnPlace startNode="spawnPlaceStart02" endNode="spawnPlaceEnd02" />
+                <spawnPlace startNode="spawnPlaceStart03" endNode="spawnPlaceEnd03" />
+            </spawnPlaces>
+        </palletSpawner>
+
+        <storage node="storage" isExtension="false" fillTypes="WATER" fillLevelSyncThreshold="10" >
+            <capacity fillType="WATER"        capacity="20000" />
+            <capacity fillType="RICESAPLINGS" capacity="5000" />
+            <!-- <capacity fillType="TREESAPLINGS" capacity="5000" /> -->
+        </storage>
+
+        <playerTrigger node="playerTrigger" />
+    </productionPoint>
+
+    <animatedObjects>
+        <animatedObject saveId="door1" >
+            <animation duration="3">
+                <part node="door1Left">
+                    <keyFrame time="0.1" rotation="0 0 0"/>
+                    <keyFrame time="1.0" rotation="0 100 0"/>
+                </part>
+            </animation>
+            <controls triggerNode="door1Trigger" posAction="ACTIVATE_HANDTOOL" posText="action_openDoor" negText="action_closeDoor" />
+            <sounds>
+                <moving linkNode="door1" template="glassDoorLoop" />
+                <negEnd linkNode="door1" template="metalDoorsClose" />
+                <posEnd linkNode="door1" template="metalDoorsOpen" />
+            </sounds>
+        </animatedObject>
+        <animatedObject saveId="door2" >
+            <animation duration="3">
+                <part node="door2Right">
+                    <keyFrame time="0.1" rotation="0 0 0"/>
+                    <keyFrame time="1.0" rotation="0 100 0"/>
+                </part>
+            </animation>
+            <controls triggerNode="door2Trigger" posAction="ACTIVATE_HANDTOOL" posText="action_openDoor" negText="action_closeDoor" />
+            <sounds>
+                <moving linkNode="door2" template="glassDoorLoop" />
+                <negEnd linkNode="door2" template="metalDoorsClose" />
+                <posEnd linkNode="door2" template="metalDoorsOpen" />
+            </sounds>
+        </animatedObject>
+    </animatedObjects>
+
+    <solarPanels>
+        <solarPanelsConfigurations title="$l10n_configuration_palletSpawnSide">
+            <solarPanelsConfiguration name="$l10n_configuration_right" isDefault="true">
+                <objectChange node="warningStripes" rotationActive="0 0 0" />
+                <objectChange node="palletSpawner" rotationActive="0 0 0" translationActive="0.497 0 0" />
+            </solarPanelsConfiguration>
+            <solarPanelsConfiguration name="$l10n_configuration_left">
+                <objectChange node="warningStripes" rotationActive="0 180 0" />
+                <objectChange node="palletSpawner" rotationActive="0 180 0" translationActive="-0.497 0 0" />
+            </solarPanelsConfiguration>
+        </solarPanelsConfigurations>
+    </solarPanels>
+
+    <i3dMappings>
+        <i3dMapping id="clearAreaStart01" node="0>0|0" />
+        <i3dMapping id="clearAreaWidth01" node="0>0|0|0" />
+        <i3dMapping id="clearAreaHeight01" node="0>0|0|1" />
+        <i3dMapping id="levelAreaStart01" node="0>1|0" />
+        <i3dMapping id="levelAreaWidth01" node="0>1|0|0" />
+        <i3dMapping id="levelAreaHeight01" node="0>1|0|1" />
+        <i3dMapping id="paintAreaStart01" node="0>2|0" />
+        <i3dMapping id="paintAreaWidth01" node="0>2|0|0" />
+        <i3dMapping id="paintAreaHeight01" node="0>2|0|1" />
+        <i3dMapping id="indoorAreaStart01" node="0>3|0" />
+        <i3dMapping id="indoorAreaWidth01" node="0>3|0|0" />
+        <i3dMapping id="indoorAreaHeight01" node="0>3|0|1" />
+        <i3dMapping id="testAreaStart01" node="0>4|0" />
+        <i3dMapping id="testAreaEnd01" node="0>4|0|0" />
+        <i3dMapping id="tipOcclusionUpdateAreaStart01" node="0>5|0" />
+        <i3dMapping id="tipOcclusionUpdateAreaEnd01" node="0>5|0|0" />
+        <i3dMapping id="plantNodes" node="0>6|0" />
+        <i3dMapping id="palletSpawner" node="0>6|2" />
+        <i3dMapping id="spawnPlaceStart01" node="0>6|2|0" />
+        <i3dMapping id="spawnPlaceEnd01" node="0>6|2|0|0" />
+        <i3dMapping id="spawnPlaceStart02" node="0>6|2|1" />
+        <i3dMapping id="spawnPlaceEnd02" node="0>6|2|1|0" />
+        <i3dMapping id="spawnPlaceStart03" node="0>6|2|2" />
+        <i3dMapping id="spawnPlaceEnd03" node="0>6|2|2|0" />
+        <i3dMapping id="sellingStation" node="0>6|3" />
+        <i3dMapping id="exactFillRootNode" node="0>6|3|0" />
+        <i3dMapping id="unloadTriggerMarker" node="0>6|3|1" />
+        <i3dMapping id="unloadTriggerAINode" node="0>6|3|2" />
+        <i3dMapping id="storage" node="0>6|4" />
+        <i3dMapping id="playerTrigger" node="0>6|5" />
+        <i3dMapping id="playerTriggerMarker" node="0>6|6" />
+        <i3dMapping id="teleportNode" node="0>6|7" />
+        <i3dMapping id="door1" node="0>7|0" />
+        <i3dMapping id="door1Left" node="0>7|0|0" />
+        <i3dMapping id="door1Trigger" node="0>7|0|1" />
+        <i3dMapping id="door2" node="0>7|1" />
+        <i3dMapping id="door2Right" node="0>7|1|0" />
+        <i3dMapping id="door2Trigger" node="0>7|1|1" />
+        <i3dMapping id="warningStripes" node="0>8" />
+        <i3dMapping id="infoTrigger" node="0>9" />
+    </i3dMappings>
+</placeable>
